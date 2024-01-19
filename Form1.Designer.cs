@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.ScheduleToggleBtn = new MaterialSkin.Controls.MaterialButton();
+            this.ScheduleTitle = new MaterialSkin.Controls.MaterialLabel();
+            this.ScheduleDeleteBtn = new MaterialSkin.Controls.MaterialButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.ScheduleDescription = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialMultiLineTextBox21 = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
-            this.materialMaskedTextBox1 = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.DescriptionTextMultiBox = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.TitleTextBox = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.TaskBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.flowLayoutPanel1.SuspendLayout();
@@ -49,66 +49,66 @@
             this.materialCard2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialButton1
+            // ScheduleToggleBtn
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(16, 18);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(73, 36);
-            this.materialButton1.TabIndex = 1;
-            this.materialButton1.Text = "Done";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.ScheduleToggleBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ScheduleToggleBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.ScheduleToggleBtn.Depth = 0;
+            this.ScheduleToggleBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ScheduleToggleBtn.HighEmphasis = true;
+            this.ScheduleToggleBtn.Icon = null;
+            this.ScheduleToggleBtn.Location = new System.Drawing.Point(16, 18);
+            this.ScheduleToggleBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ScheduleToggleBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ScheduleToggleBtn.Name = "ScheduleToggleBtn";
+            this.ScheduleToggleBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.ScheduleToggleBtn.Size = new System.Drawing.Size(73, 36);
+            this.ScheduleToggleBtn.TabIndex = 1;
+            this.ScheduleToggleBtn.Text = "Done";
+            this.ScheduleToggleBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.ScheduleToggleBtn.UseAccentColor = false;
+            this.ScheduleToggleBtn.UseVisualStyleBackColor = true;
             // 
-            // materialLabel1
+            // ScheduleTitle
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
-            this.materialLabel1.Location = new System.Drawing.Point(15, 12);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialLabel1.Size = new System.Drawing.Size(95, 58);
-            this.materialLabel1.TabIndex = 2;
-            this.materialLabel1.Text = "Title";
+            this.ScheduleTitle.AutoSize = true;
+            this.ScheduleTitle.Depth = 0;
+            this.ScheduleTitle.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.ScheduleTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
+            this.ScheduleTitle.Location = new System.Drawing.Point(15, 12);
+            this.ScheduleTitle.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ScheduleTitle.Name = "ScheduleTitle";
+            this.ScheduleTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ScheduleTitle.Size = new System.Drawing.Size(95, 58);
+            this.ScheduleTitle.TabIndex = 2;
+            this.ScheduleTitle.Text = "Title";
             // 
-            // materialButton2
+            // ScheduleDeleteBtn
             // 
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(16, 66);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(73, 36);
-            this.materialButton2.TabIndex = 3;
-            this.materialButton2.Text = "Delete";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
+            this.ScheduleDeleteBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ScheduleDeleteBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.ScheduleDeleteBtn.Depth = 0;
+            this.ScheduleDeleteBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ScheduleDeleteBtn.HighEmphasis = true;
+            this.ScheduleDeleteBtn.Icon = null;
+            this.ScheduleDeleteBtn.Location = new System.Drawing.Point(16, 66);
+            this.ScheduleDeleteBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ScheduleDeleteBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ScheduleDeleteBtn.Name = "ScheduleDeleteBtn";
+            this.ScheduleDeleteBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.ScheduleDeleteBtn.Size = new System.Drawing.Size(73, 36);
+            this.ScheduleDeleteBtn.TabIndex = 3;
+            this.ScheduleDeleteBtn.Text = "Delete";
+            this.ScheduleDeleteBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.ScheduleDeleteBtn.UseAccentColor = false;
+            this.ScheduleDeleteBtn.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.materialButton1);
-            this.flowLayoutPanel1.Controls.Add(this.materialButton2);
+            this.flowLayoutPanel1.Controls.Add(this.ScheduleToggleBtn);
+            this.flowLayoutPanel1.Controls.Add(this.ScheduleDeleteBtn);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(818, 14);
@@ -119,24 +119,24 @@
             this.flowLayoutPanel1.TabIndex = 4;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // materialLabel2
+            // ScheduleDescription
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(15, 70);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialLabel2.Size = new System.Drawing.Size(81, 19);
-            this.materialLabel2.TabIndex = 5;
-            this.materialLabel2.Text = "Description";
+            this.ScheduleDescription.AutoSize = true;
+            this.ScheduleDescription.Depth = 0;
+            this.ScheduleDescription.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ScheduleDescription.Location = new System.Drawing.Point(15, 70);
+            this.ScheduleDescription.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ScheduleDescription.Name = "ScheduleDescription";
+            this.ScheduleDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ScheduleDescription.Size = new System.Drawing.Size(81, 19);
+            this.ScheduleDescription.TabIndex = 5;
+            this.ScheduleDescription.Text = "Description";
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.materialLabel1);
-            this.flowLayoutPanel2.Controls.Add(this.materialLabel2);
+            this.flowLayoutPanel2.Controls.Add(this.ScheduleTitle);
+            this.flowLayoutPanel2.Controls.Add(this.ScheduleDescription);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(14, 14);
@@ -171,78 +171,78 @@
             this.panel1.Size = new System.Drawing.Size(0, 0);
             this.panel1.TabIndex = 9;
             // 
-            // materialMultiLineTextBox21
+            // DescriptionTextMultiBox
             // 
-            this.materialMultiLineTextBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DescriptionTextMultiBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialMultiLineTextBox21.AnimateReadOnly = false;
-            this.materialMultiLineTextBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialMultiLineTextBox21.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialMultiLineTextBox21.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.materialMultiLineTextBox21.Depth = 0;
-            this.materialMultiLineTextBox21.HideSelection = true;
-            this.materialMultiLineTextBox21.Location = new System.Drawing.Point(11, 109);
-            this.materialMultiLineTextBox21.MaxLength = 32767;
-            this.materialMultiLineTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialMultiLineTextBox21.Name = "materialMultiLineTextBox21";
-            this.materialMultiLineTextBox21.PasswordChar = '\0';
-            this.materialMultiLineTextBox21.ReadOnly = false;
-            this.materialMultiLineTextBox21.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.materialMultiLineTextBox21.SelectedText = "";
-            this.materialMultiLineTextBox21.SelectionLength = 0;
-            this.materialMultiLineTextBox21.SelectionStart = 0;
-            this.materialMultiLineTextBox21.ShortcutsEnabled = true;
-            this.materialMultiLineTextBox21.Size = new System.Drawing.Size(906, 113);
-            this.materialMultiLineTextBox21.TabIndex = 2;
-            this.materialMultiLineTextBox21.TabStop = false;
-            this.materialMultiLineTextBox21.Text = "create a description...";
-            this.materialMultiLineTextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialMultiLineTextBox21.UseSystemPasswordChar = false;
+            this.DescriptionTextMultiBox.AnimateReadOnly = false;
+            this.DescriptionTextMultiBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DescriptionTextMultiBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.DescriptionTextMultiBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DescriptionTextMultiBox.Depth = 0;
+            this.DescriptionTextMultiBox.HideSelection = true;
+            this.DescriptionTextMultiBox.Location = new System.Drawing.Point(11, 109);
+            this.DescriptionTextMultiBox.MaxLength = 32767;
+            this.DescriptionTextMultiBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.DescriptionTextMultiBox.Name = "DescriptionTextMultiBox";
+            this.DescriptionTextMultiBox.PasswordChar = '\0';
+            this.DescriptionTextMultiBox.ReadOnly = false;
+            this.DescriptionTextMultiBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.DescriptionTextMultiBox.SelectedText = "";
+            this.DescriptionTextMultiBox.SelectionLength = 0;
+            this.DescriptionTextMultiBox.SelectionStart = 0;
+            this.DescriptionTextMultiBox.ShortcutsEnabled = true;
+            this.DescriptionTextMultiBox.Size = new System.Drawing.Size(906, 113);
+            this.DescriptionTextMultiBox.TabIndex = 2;
+            this.DescriptionTextMultiBox.TabStop = false;
+            this.DescriptionTextMultiBox.Text = "create a description...";
+            this.DescriptionTextMultiBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.DescriptionTextMultiBox.UseSystemPasswordChar = false;
             // 
-            // materialMaskedTextBox1
+            // TitleTextBox
             // 
-            this.materialMaskedTextBox1.AllowPromptAsInput = true;
-            this.materialMaskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TitleTextBox.AllowPromptAsInput = true;
+            this.TitleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialMaskedTextBox1.AnimateReadOnly = false;
-            this.materialMaskedTextBox1.AsciiOnly = false;
-            this.materialMaskedTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialMaskedTextBox1.BeepOnError = false;
-            this.materialMaskedTextBox1.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.materialMaskedTextBox1.Depth = 0;
-            this.materialMaskedTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialMaskedTextBox1.HidePromptOnLeave = false;
-            this.materialMaskedTextBox1.HideSelection = true;
-            this.materialMaskedTextBox1.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.materialMaskedTextBox1.LeadingIcon = null;
-            this.materialMaskedTextBox1.Location = new System.Drawing.Point(11, 36);
-            this.materialMaskedTextBox1.Mask = "";
-            this.materialMaskedTextBox1.MaxLength = 32767;
-            this.materialMaskedTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialMaskedTextBox1.Name = "materialMaskedTextBox1";
-            this.materialMaskedTextBox1.PasswordChar = '\0';
-            this.materialMaskedTextBox1.PrefixSuffixText = null;
-            this.materialMaskedTextBox1.PromptChar = '_';
-            this.materialMaskedTextBox1.ReadOnly = false;
-            this.materialMaskedTextBox1.RejectInputOnFirstFailure = false;
-            this.materialMaskedTextBox1.ResetOnPrompt = true;
-            this.materialMaskedTextBox1.ResetOnSpace = true;
-            this.materialMaskedTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialMaskedTextBox1.SelectedText = "";
-            this.materialMaskedTextBox1.SelectionLength = 0;
-            this.materialMaskedTextBox1.SelectionStart = 0;
-            this.materialMaskedTextBox1.ShortcutsEnabled = true;
-            this.materialMaskedTextBox1.Size = new System.Drawing.Size(250, 48);
-            this.materialMaskedTextBox1.SkipLiterals = true;
-            this.materialMaskedTextBox1.TabIndex = 1;
-            this.materialMaskedTextBox1.TabStop = false;
-            this.materialMaskedTextBox1.Text = "Enter title name";
-            this.materialMaskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialMaskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.materialMaskedTextBox1.TrailingIcon = null;
-            this.materialMaskedTextBox1.UseSystemPasswordChar = false;
-            this.materialMaskedTextBox1.ValidatingType = null;
+            this.TitleTextBox.AnimateReadOnly = false;
+            this.TitleTextBox.AsciiOnly = false;
+            this.TitleTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TitleTextBox.BeepOnError = false;
+            this.TitleTextBox.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.TitleTextBox.Depth = 0;
+            this.TitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TitleTextBox.HidePromptOnLeave = false;
+            this.TitleTextBox.HideSelection = true;
+            this.TitleTextBox.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.TitleTextBox.LeadingIcon = null;
+            this.TitleTextBox.Location = new System.Drawing.Point(11, 36);
+            this.TitleTextBox.Mask = "";
+            this.TitleTextBox.MaxLength = 32767;
+            this.TitleTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.PasswordChar = '\0';
+            this.TitleTextBox.PrefixSuffixText = null;
+            this.TitleTextBox.PromptChar = '_';
+            this.TitleTextBox.ReadOnly = false;
+            this.TitleTextBox.RejectInputOnFirstFailure = false;
+            this.TitleTextBox.ResetOnPrompt = true;
+            this.TitleTextBox.ResetOnSpace = true;
+            this.TitleTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TitleTextBox.SelectedText = "";
+            this.TitleTextBox.SelectionLength = 0;
+            this.TitleTextBox.SelectionStart = 0;
+            this.TitleTextBox.ShortcutsEnabled = true;
+            this.TitleTextBox.Size = new System.Drawing.Size(250, 48);
+            this.TitleTextBox.SkipLiterals = true;
+            this.TitleTextBox.TabIndex = 1;
+            this.TitleTextBox.TabStop = false;
+            this.TitleTextBox.Text = "Enter title name";
+            this.TitleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TitleTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.TitleTextBox.TrailingIcon = null;
+            this.TitleTextBox.UseSystemPasswordChar = false;
+            this.TitleTextBox.ValidatingType = null;
             // 
             // materialLabel3
             // 
@@ -274,27 +274,27 @@
             this.materialLabel4.TabIndex = 14;
             this.materialLabel4.Text = "Title";
             // 
-            // materialButton3
+            // TaskBtn
             // 
-            this.materialButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TaskBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(11, 231);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(129, 36);
-            this.materialButton3.TabIndex = 3;
-            this.materialButton3.Text = "Create a task";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton3.UseAccentColor = false;
-            this.materialButton3.UseVisualStyleBackColor = true;
+            this.TaskBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.TaskBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.TaskBtn.Depth = 0;
+            this.TaskBtn.HighEmphasis = true;
+            this.TaskBtn.Icon = null;
+            this.TaskBtn.Location = new System.Drawing.Point(11, 231);
+            this.TaskBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.TaskBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TaskBtn.Name = "TaskBtn";
+            this.TaskBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.TaskBtn.Size = new System.Drawing.Size(129, 36);
+            this.TaskBtn.TabIndex = 3;
+            this.TaskBtn.Text = "Create a task";
+            this.TaskBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.TaskBtn.UseAccentColor = false;
+            this.TaskBtn.UseVisualStyleBackColor = true;
             // 
             // materialCard1
             // 
@@ -319,10 +319,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard2.Controls.Add(this.materialLabel4);
-            this.materialCard2.Controls.Add(this.materialMultiLineTextBox21);
-            this.materialCard2.Controls.Add(this.materialMaskedTextBox1);
+            this.materialCard2.Controls.Add(this.DescriptionTextMultiBox);
+            this.materialCard2.Controls.Add(this.TitleTextBox);
             this.materialCard2.Controls.Add(this.materialLabel3);
-            this.materialCard2.Controls.Add(this.materialButton3);
+            this.materialCard2.Controls.Add(this.TaskBtn);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard2.Location = new System.Drawing.Point(6, 78);
@@ -360,19 +360,19 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton ScheduleToggleBtn;
+        private MaterialSkin.Controls.MaterialLabel ScheduleTitle;
+        private MaterialSkin.Controls.MaterialButton ScheduleDeleteBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel ScheduleDescription;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox2 materialMultiLineTextBox21;
-        private MaterialSkin.Controls.MaterialMaskedTextBox materialMaskedTextBox1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 DescriptionTextMultiBox;
+        private MaterialSkin.Controls.MaterialMaskedTextBox TitleTextBox;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private MaterialSkin.Controls.MaterialButton TaskBtn;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
     }
