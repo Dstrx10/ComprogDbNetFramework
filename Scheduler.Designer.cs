@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ScheduleToggleBtn = new MaterialSkin.Controls.MaterialButton();
-            this.ScheduleTitle = new MaterialSkin.Controls.MaterialLabel();
-            this.ScheduleDeleteBtn = new MaterialSkin.Controls.MaterialButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ScheduleDescription = new MaterialSkin.Controls.MaterialLabel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DescriptionTextMultiBox = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
@@ -41,110 +35,15 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.TaskBtn = new MaterialSkin.Controls.MaterialButton();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.materialCard1.SuspendLayout();
+            this.ScheduleDataTable = new System.Windows.Forms.DataGridView();
+            this.TitleCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescriptionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsCompleteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialCard2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ScheduleDataTable)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ScheduleToggleBtn
-            // 
-            this.ScheduleToggleBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ScheduleToggleBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.ScheduleToggleBtn.Depth = 0;
-            this.ScheduleToggleBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ScheduleToggleBtn.HighEmphasis = true;
-            this.ScheduleToggleBtn.Icon = null;
-            this.ScheduleToggleBtn.Location = new System.Drawing.Point(16, 18);
-            this.ScheduleToggleBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ScheduleToggleBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ScheduleToggleBtn.Name = "ScheduleToggleBtn";
-            this.ScheduleToggleBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.ScheduleToggleBtn.Size = new System.Drawing.Size(73, 36);
-            this.ScheduleToggleBtn.TabIndex = 1;
-            this.ScheduleToggleBtn.Text = "Done";
-            this.ScheduleToggleBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.ScheduleToggleBtn.UseAccentColor = false;
-            this.ScheduleToggleBtn.UseVisualStyleBackColor = true;
-            // 
-            // ScheduleTitle
-            // 
-            this.ScheduleTitle.AutoSize = true;
-            this.ScheduleTitle.Depth = 0;
-            this.ScheduleTitle.Font = new System.Drawing.Font("Roboto", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ScheduleTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
-            this.ScheduleTitle.Location = new System.Drawing.Point(15, 12);
-            this.ScheduleTitle.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ScheduleTitle.Name = "ScheduleTitle";
-            this.ScheduleTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ScheduleTitle.Size = new System.Drawing.Size(95, 58);
-            this.ScheduleTitle.TabIndex = 2;
-            this.ScheduleTitle.Text = "Title";
-            // 
-            // ScheduleDeleteBtn
-            // 
-            this.ScheduleDeleteBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ScheduleDeleteBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.ScheduleDeleteBtn.Depth = 0;
-            this.ScheduleDeleteBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ScheduleDeleteBtn.HighEmphasis = true;
-            this.ScheduleDeleteBtn.Icon = null;
-            this.ScheduleDeleteBtn.Location = new System.Drawing.Point(16, 66);
-            this.ScheduleDeleteBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ScheduleDeleteBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ScheduleDeleteBtn.Name = "ScheduleDeleteBtn";
-            this.ScheduleDeleteBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.ScheduleDeleteBtn.Size = new System.Drawing.Size(73, 36);
-            this.ScheduleDeleteBtn.TabIndex = 3;
-            this.ScheduleDeleteBtn.Text = "Delete";
-            this.ScheduleDeleteBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.ScheduleDeleteBtn.UseAccentColor = false;
-            this.ScheduleDeleteBtn.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.ScheduleToggleBtn);
-            this.flowLayoutPanel1.Controls.Add(this.ScheduleDeleteBtn);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(818, 14);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(12);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(105, 140);
-            this.flowLayoutPanel1.TabIndex = 4;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // ScheduleDescription
-            // 
-            this.ScheduleDescription.AutoSize = true;
-            this.ScheduleDescription.Depth = 0;
-            this.ScheduleDescription.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ScheduleDescription.Location = new System.Drawing.Point(15, 70);
-            this.ScheduleDescription.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ScheduleDescription.Name = "ScheduleDescription";
-            this.ScheduleDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ScheduleDescription.Size = new System.Drawing.Size(81, 19);
-            this.ScheduleDescription.TabIndex = 5;
-            this.ScheduleDescription.Text = "Description";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.ScheduleTitle);
-            this.flowLayoutPanel2.Controls.Add(this.ScheduleDescription);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(14, 14);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(15);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(12);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(125, 140);
-            this.flowLayoutPanel2.TabIndex = 6;
             // 
             // tableLayoutPanel1
             // 
@@ -193,7 +92,7 @@
             this.DescriptionTextMultiBox.SelectionLength = 0;
             this.DescriptionTextMultiBox.SelectionStart = 0;
             this.DescriptionTextMultiBox.ShortcutsEnabled = true;
-            this.DescriptionTextMultiBox.Size = new System.Drawing.Size(906, 113);
+            this.DescriptionTextMultiBox.Size = new System.Drawing.Size(851, 113);
             this.DescriptionTextMultiBox.TabIndex = 2;
             this.DescriptionTextMultiBox.TabStop = false;
             this.DescriptionTextMultiBox.Text = "create a description...";
@@ -295,23 +194,7 @@
             this.TaskBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.TaskBtn.UseAccentColor = false;
             this.TaskBtn.UseVisualStyleBackColor = true;
-            // 
-            // materialCard1
-            // 
-            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.flowLayoutPanel1);
-            this.materialCard1.Controls.Add(this.flowLayoutPanel2);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(6, 380);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(937, 168);
-            this.materialCard1.TabIndex = 19;
+            this.TaskBtn.Click += new System.EventHandler(this.TaskBtn_Click);
             // 
             // materialCard2
             // 
@@ -330,42 +213,78 @@
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(934, 274);
+            this.materialCard2.Size = new System.Drawing.Size(879, 274);
             this.materialCard2.TabIndex = 20;
+            // 
+            // ScheduleDataTable
+            // 
+            this.ScheduleDataTable.AllowUserToAddRows = false;
+            this.ScheduleDataTable.AllowUserToDeleteRows = false;
+            this.ScheduleDataTable.AllowUserToResizeColumns = false;
+            this.ScheduleDataTable.AllowUserToResizeRows = false;
+            this.ScheduleDataTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ScheduleDataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ScheduleDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ScheduleDataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TitleCol,
+            this.DescriptionCol,
+            this.DateCol,
+            this.IsCompleteCol});
+            this.ScheduleDataTable.Location = new System.Drawing.Point(6, 387);
+            this.ScheduleDataTable.Name = "ScheduleDataTable";
+            this.ScheduleDataTable.ReadOnly = true;
+            this.ScheduleDataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.ScheduleDataTable.Size = new System.Drawing.Size(879, 390);
+            this.ScheduleDataTable.TabIndex = 21;
+            this.ScheduleDataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ScheduleDataTable_CellContentClick);
+            // 
+            // TitleCol
+            // 
+            this.TitleCol.HeaderText = "Title";
+            this.TitleCol.Name = "TitleCol";
+            this.TitleCol.ReadOnly = true;
+            // 
+            // DescriptionCol
+            // 
+            this.DescriptionCol.HeaderText = "Description";
+            this.DescriptionCol.Name = "DescriptionCol";
+            this.DescriptionCol.ReadOnly = true;
+            // 
+            // DateCol
+            // 
+            this.DateCol.HeaderText = "Date";
+            this.DateCol.Name = "DateCol";
+            this.DateCol.ReadOnly = true;
+            // 
+            // IsCompleteCol
+            // 
+            this.IsCompleteCol.HeaderText = "Complete";
+            this.IsCompleteCol.Name = "IsCompleteCol";
+            this.IsCompleteCol.ReadOnly = true;
             // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 790);
+            this.ClientSize = new System.Drawing.Size(894, 790);
+            this.Controls.Add(this.ScheduleDataTable);
             this.Controls.Add(this.materialCard2);
-            this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "Scheduler";
             this.Text = "Task Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ScheduleDataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialButton ScheduleToggleBtn;
-        private MaterialSkin.Controls.MaterialLabel ScheduleTitle;
-        private MaterialSkin.Controls.MaterialButton ScheduleDeleteBtn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MaterialSkin.Controls.MaterialLabel ScheduleDescription;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialMultiLineTextBox2 DescriptionTextMultiBox;
@@ -373,8 +292,12 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialButton TaskBtn;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
+        private System.Windows.Forms.DataGridView ScheduleDataTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TitleCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsCompleteCol;
     }
 }
 
