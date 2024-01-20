@@ -27,7 +27,6 @@ namespace ComprogDbNetFramework
             this.date = date;
             this.isComplete = isComplete;
             InitializeComponent();
-            MessageBox.Show($"{this.title},{this.description},{this.date},{this.isComplete}");
             ScheduleTitleLabel.Text = title;
             ScheduleDescriptionLabel.Text = description;
             ScheduleDescriptionTextBox.Text = description;
