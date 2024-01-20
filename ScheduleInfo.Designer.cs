@@ -66,21 +66,6 @@
             this.materialCard1.TabIndex = 0;
             this.materialCard1.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard1_Paint);
             // 
-            // isCompletedCheckBox
-            // 
-            this.isCompletedCheckBox.AutoSize = true;
-            this.isCompletedCheckBox.Depth = 0;
-            this.isCompletedCheckBox.Location = new System.Drawing.Point(14, 439);
-            this.isCompletedCheckBox.Margin = new System.Windows.Forms.Padding(0);
-            this.isCompletedCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.isCompletedCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.isCompletedCheckBox.Name = "isCompletedCheckBox";
-            this.isCompletedCheckBox.ReadOnly = false;
-            this.isCompletedCheckBox.Ripple = true;
-            this.isCompletedCheckBox.Size = new System.Drawing.Size(141, 37);
-            this.isCompletedCheckBox.TabIndex = 0;
-            this.isCompletedCheckBox.Text = "Task Complete";
-            // 
             // UpdateBtn
             // 
             this.UpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));

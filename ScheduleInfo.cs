@@ -19,6 +19,7 @@ namespace ComprogDbNetFramework
         private DateTime date;
         private bool isComplete;
         string filePath = System.IO.Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
+
         public ScheduleInfo(string title, string description, DateTime date, bool isComplete)
         {
             this.title = title;
