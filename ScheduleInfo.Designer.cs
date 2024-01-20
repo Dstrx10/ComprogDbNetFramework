@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.isCompletedCheckBox = new MaterialSkin.Controls.MaterialCheckbox();
             this.UpdateBtn = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ScheduleDescriptionLabel = new MaterialSkin.Controls.MaterialLabel();
@@ -37,9 +38,6 @@
             this.ScheduleTitleTextBox = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.ScheduleTitleLabel = new MaterialSkin.Controls.MaterialLabel();
             this.GoBackBtn = new MaterialSkin.Controls.MaterialButton();
-            this.ScheduleDescriptionTextBox = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.UpdateBtn = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +65,19 @@
             this.materialCard1.Size = new System.Drawing.Size(1013, 583);
             this.materialCard1.TabIndex = 0;
             this.materialCard1.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard1_Paint);
+            // 
+            // isCompletedCheckBox
+            // 
+            this.isCompletedCheckBox.Depth = 0;
+            this.isCompletedCheckBox.Location = new System.Drawing.Point(14, 439);
+            this.isCompletedCheckBox.Margin = new System.Windows.Forms.Padding(0);
+            this.isCompletedCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.isCompletedCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.isCompletedCheckBox.Name = "isCompletedCheckBox";
+            this.isCompletedCheckBox.ReadOnly = false;
+            this.isCompletedCheckBox.Ripple = true;
+            this.isCompletedCheckBox.Size = new System.Drawing.Size(104, 37);
+            this.isCompletedCheckBox.TabIndex = 0;
             // 
             // UpdateBtn
             // 
@@ -99,6 +110,44 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(982, 126);
             this.panel1.TabIndex = 8;
+            // 
+            // ScheduleDescriptionLabel
+            // 
+            this.ScheduleDescriptionLabel.Depth = 0;
+            this.ScheduleDescriptionLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ScheduleDescriptionLabel.Location = new System.Drawing.Point(0, 0);
+            this.ScheduleDescriptionLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ScheduleDescriptionLabel.Name = "ScheduleDescriptionLabel";
+            this.ScheduleDescriptionLabel.Size = new System.Drawing.Size(100, 23);
+            this.ScheduleDescriptionLabel.TabIndex = 0;
+            // 
+            // ScheduleDescriptionTextBox
+            // 
+            this.ScheduleDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ScheduleDescriptionTextBox.AnimateReadOnly = false;
+            this.ScheduleDescriptionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ScheduleDescriptionTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.ScheduleDescriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ScheduleDescriptionTextBox.Depth = 0;
+            this.ScheduleDescriptionTextBox.HideSelection = true;
+            this.ScheduleDescriptionTextBox.Location = new System.Drawing.Point(14, 325);
+            this.ScheduleDescriptionTextBox.MaxLength = 32767;
+            this.ScheduleDescriptionTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.ScheduleDescriptionTextBox.Name = "ScheduleDescriptionTextBox";
+            this.ScheduleDescriptionTextBox.PasswordChar = '\0';
+            this.ScheduleDescriptionTextBox.ReadOnly = false;
+            this.ScheduleDescriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ScheduleDescriptionTextBox.SelectedText = "";
+            this.ScheduleDescriptionTextBox.SelectionLength = 0;
+            this.ScheduleDescriptionTextBox.SelectionStart = 0;
+            this.ScheduleDescriptionTextBox.ShortcutsEnabled = true;
+            this.ScheduleDescriptionTextBox.Size = new System.Drawing.Size(982, 100);
+            this.ScheduleDescriptionTextBox.TabIndex = 7;
+            this.ScheduleDescriptionTextBox.TabStop = false;
+            this.ScheduleDescriptionTextBox.Text = "Edit the description";
+            this.ScheduleDescriptionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ScheduleDescriptionTextBox.UseSystemPasswordChar = false;
             // 
             // DeleteBtn
             // 
@@ -203,66 +252,6 @@
             this.GoBackBtn.UseVisualStyleBackColor = true;
             this.GoBackBtn.Click += new System.EventHandler(this.GoBackBtn_Click);
             // 
-            // ScheduleDescriptionTextBox
-            // 
-            this.ScheduleDescriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ScheduleDescriptionTextBox.AnimateReadOnly = false;
-            this.ScheduleDescriptionTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ScheduleDescriptionTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.ScheduleDescriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ScheduleDescriptionTextBox.Depth = 0;
-            this.ScheduleDescriptionTextBox.HideSelection = true;
-            this.ScheduleDescriptionTextBox.Location = new System.Drawing.Point(14, 325);
-            this.ScheduleDescriptionTextBox.MaxLength = 32767;
-            this.ScheduleDescriptionTextBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.ScheduleDescriptionTextBox.Name = "ScheduleDescriptionTextBox";
-            this.ScheduleDescriptionTextBox.PasswordChar = '\0';
-            this.ScheduleDescriptionTextBox.ReadOnly = false;
-            this.ScheduleDescriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ScheduleDescriptionTextBox.SelectedText = "";
-            this.ScheduleDescriptionTextBox.SelectionLength = 0;
-            this.ScheduleDescriptionTextBox.SelectionStart = 0;
-            this.ScheduleDescriptionTextBox.ShortcutsEnabled = true;
-            this.ScheduleDescriptionTextBox.Size = new System.Drawing.Size(982, 100);
-            this.ScheduleDescriptionTextBox.TabIndex = 7;
-            this.ScheduleDescriptionTextBox.TabStop = false;
-            this.ScheduleDescriptionTextBox.Text = "Edit the description";
-            this.ScheduleDescriptionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ScheduleDescriptionTextBox.UseSystemPasswordChar = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.ScheduleDescriptionLabel);
-            this.panel1.Location = new System.Drawing.Point(14, 169);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 126);
-            this.panel1.TabIndex = 8;
-            // 
-            // UpdateBtn
-            // 
-            this.UpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.UpdateBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.UpdateBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.UpdateBtn.Depth = 0;
-            this.UpdateBtn.HighEmphasis = true;
-            this.UpdateBtn.Icon = null;
-            this.UpdateBtn.Location = new System.Drawing.Point(919, 527);
-            this.UpdateBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.UpdateBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.UpdateBtn.Size = new System.Drawing.Size(77, 36);
-            this.UpdateBtn.TabIndex = 9;
-            this.UpdateBtn.Text = "Update";
-            this.UpdateBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.UpdateBtn.UseAccentColor = false;
-            this.UpdateBtn.UseVisualStyleBackColor = true;
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
-            // 
             // ScheduleInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,7 +263,6 @@
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

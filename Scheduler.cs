@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +16,14 @@ namespace ComprogDbNetFramework
 {
     public partial class Scheduler : MaterialForm
     {
-        string filePath = @"C:\Users\MHELL\source\repos\ComprogDbNetFramework\ScheduleTextFile.txt";
+        // change the file path to current user's path
+
+        readonly string filePath = Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
+
         public Scheduler()
         {
-            InitializeComponent();
+
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
