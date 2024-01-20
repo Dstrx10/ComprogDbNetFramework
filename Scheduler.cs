@@ -19,6 +19,10 @@ namespace ComprogDbNetFramework
         string filePath = System.IO.Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
         public Scheduler()
         {
+            if (!System.IO.File.Exists(filePath))
+            {
+                FileStream fileStream = File.Create(filePath);
+            }
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
