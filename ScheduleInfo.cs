@@ -18,7 +18,7 @@ namespace ComprogDbNetFramework
         private string description;
         private DateTime date;
         private bool isComplete;
-        string filePath = @"C:\Users\MHELL\source\repos\ComprogDbNetFramework\ScheduleTextFile.txt";
+        string filePath = System.IO.Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
         public ScheduleInfo(string title, string description, DateTime date, bool isComplete)
         {
             InitializeComponent();

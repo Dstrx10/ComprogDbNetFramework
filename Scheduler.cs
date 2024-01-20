@@ -16,10 +16,7 @@ namespace ComprogDbNetFramework
 {
     public partial class Scheduler : MaterialForm
     {
-        // change the file path to current user's path
-
-        readonly string filePath = Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
-
+        string filePath = @"C:\Users\MHELL\source\repos\ComprogDbNetFramework\ScheduleTextFile.txt";
         public Scheduler()
         {
 
