@@ -14,9 +14,21 @@ namespace ComprogDbNetFramework
 {
     public partial class ScheduleInfo : MaterialForm
     {
-        public ScheduleInfo()
+        private string title;
+        private string description;
+        private DateTime date;
+        private bool isComplete;
+        string filePath = @"C:\Users\MHELL\source\repos\ComprogDbNetFramework\ScheduleTextFile.txt";
+        public ScheduleInfo(string title, string description, DateTime date, bool isComplete)
         {
             InitializeComponent();
+            this.title = title;
+            this.description = description;
+            this.date = date;
+            this.isComplete = isComplete;
+            ScheduleTitleTextBox.Text = title;
+            ScheduleDescriptionTextBox.Text = description;
+            isCompletedCheckBox.Checked = isComplete;
         }
 
         private void GoBackBtn_Click(object sender, EventArgs e)
@@ -27,12 +39,36 @@ namespace ComprogDbNetFramework
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult = MessageBox.Show("Would You like to edit?", "Delete Task", buttons);
+            DialogResult = MessageBox.Show("Would you like to delete?", "Delete Task", buttons);
             // get the value of the message box if yes or no
-            if (DialogResult == DialogResult.No)
+            if (DialogResult == DialogResult.Yes)
             {
-                // do nothing
-                return;
+                DeleteData();
+                this.Close();
+            }
+        }
+        private void UpdateData()
+        {
+            string[] lines = System.IO.File.ReadAllLines(filePath);
+            string searchString = $"{title},{description},{date},{!isComplete}";
+            int index = Array.FindIndex(lines, line => line == searchString);
+            if (index != -1)
+            {
+                lines[index] = $"{ScheduleTitleTextBox.Text.Trim()},{ScheduleDescriptionTextBox.Text.Trim()},{date},{isComplete}";
+                System.IO.File.WriteAllLines(filePath, lines);
+            }
+        }
+        private void DeleteData()
+        {
+            string[] lines = System.IO.File.ReadAllLines(filePath);
+            string searchString = $"{title},{description},{date},{isComplete}";
+            int index = Array.FindIndex(lines, line => line == searchString);
+            if (index != -1)
+            {
+                List<string> updatedLines = lines.ToList();
+                updatedLines.RemoveAt(index);
+                System.IO.File.WriteAllLines(filePath, updatedLines);
+                this.Dispose();
             }
         }
 
@@ -49,16 +85,35 @@ namespace ComprogDbNetFramework
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             //update the schedule info title and description
-            if(ScheduleTitleTextBox.Text != "" && ScheduleTitleTextBox.Text != "Edit Schedule Title")
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Would you like to update?", "Edit Task", buttons);
+            title = ScheduleTitleTextBox.Text;
+            description = ScheduleTitleTextBox.Text;
+            if (result == DialogResult.Yes)
             {
-                ScheduleTitleLabel.Text = ScheduleTitleTextBox.Text;
-                ScheduleTitleTextBox.Text = "Edit Schedule Title";
+                if (ScheduleTitleTextBox.Text != "" && ScheduleTitleTextBox.Text != "Edit Schedule Title")
+                {
+                    UpdateData();
+                    ScheduleTitleLabel.Text = ScheduleTitleTextBox.Text;
+                    ScheduleTitleTextBox.Text = "Edit Schedule Title";
+                }
+                if (ScheduleDescriptionTextBox.Text != "" && ScheduleDescriptionTextBox.Text != "Edit the description")
+                {
+                    ScheduleDescriptionLabel.Text = ScheduleDescriptionTextBox.Text;
+                    ScheduleDescriptionTextBox.Text = "Edit the description";
+                }
             }
-            if(ScheduleDescriptionTextBox.Text != "" && ScheduleDescriptionTextBox.Text != "Edit the description")
-            {
-                ScheduleDescriptionLabel.Text = ScheduleDescriptionTextBox.Text;
-                ScheduleDescriptionTextBox.Text = "Edit the description";
-            }
+        }
+
+        private void materialCard1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void isCompletedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            isComplete = isCompletedCheckBox.Checked;
+            UpdateData();
         }
     }
 }
