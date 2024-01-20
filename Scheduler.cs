@@ -16,11 +16,16 @@ namespace ComprogDbNetFramework
 {
     public partial class Scheduler : MaterialForm
     {
-        string filePath = @"C:\Users\MHELL\source\repos\ComprogDbNetFramework\ScheduleTextFile.txt";
+        string filePath = System.IO.Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
         public Scheduler()
         {
 
-
+            if (!System.IO.File.Exists(filePath))
+            {
+                FileStream fileStream = File.Create(filePath);
+            }
+            
+            InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -65,7 +70,7 @@ namespace ComprogDbNetFramework
             TaskBtn.Enabled = false;
             string title = TitleTextBox.Text.Trim();
             string description = DescriptionTextMultiBox.Text.Trim();
-            DateTime date = DateTime.Now; 
+            DateTime date = DateTime.Now;
             bool isComplete = false;
 
             if (TitleTextBox.Text == "Enter title name" && DescriptionTextMultiBox.Text == "Create a description...")
@@ -77,7 +82,7 @@ namespace ComprogDbNetFramework
                 SaveDataToFile(title, description, date, isComplete);
                 ScheduleDataTable.Rows.Clear(); //clear data in datagrid before loading data from txt file fuck u
                 LoadDataFromFile();
-            }           
+            }
             else
             {
                 MessageBox.Show("Title and Description cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -111,7 +116,7 @@ namespace ComprogDbNetFramework
                     ScheduleDataTable.Rows.Clear();
                     LoadDataFromFile();
                 }
-                else 
+                else
                 {
                     return;
                 }

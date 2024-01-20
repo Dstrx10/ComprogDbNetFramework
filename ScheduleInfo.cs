@@ -21,14 +21,17 @@ namespace ComprogDbNetFramework
         string filePath = System.IO.Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
         public ScheduleInfo(string title, string description, DateTime date, bool isComplete)
         {
-            InitializeComponent();
             this.title = title;
             this.description = description;
             this.date = date;
             this.isComplete = isComplete;
-            ScheduleTitleTextBox.Text = title;
+            InitializeComponent();
+            MessageBox.Show($"{this.title},{this.description},{this.date},{this.isComplete}");
+            ScheduleTitleLabel.Text = title;
+            ScheduleDescriptionLabel.Text = description;
             ScheduleDescriptionTextBox.Text = description;
             isCompletedCheckBox.Checked = isComplete;
+            ScheduleTitleTextBox.Text = title;
         }
 
         private void GoBackBtn_Click(object sender, EventArgs e)
@@ -50,11 +53,12 @@ namespace ComprogDbNetFramework
         private void UpdateData()
         {
             string[] lines = System.IO.File.ReadAllLines(filePath);
-            string searchString = $"{title},{description},{date},{!isComplete}";
-            int index = Array.FindIndex(lines, line => line == searchString);
-            if (index != -1)
+            string searchString = $"{title},{description},{date},{isComplete}";
+            int index = Array.FindIndex(lines, line => line == searchString) == -1 ? 0 : Array.FindIndex(lines, line => line == searchString);
+            if (index >= 0)
             {
-                lines[index] = $"{ScheduleTitleTextBox.Text.Trim()},{ScheduleDescriptionTextBox.Text.Trim()},{date},{isComplete}";
+                // get the index
+                lines.SetValue($"{ScheduleTitleTextBox.Text.Trim()},{ScheduleDescriptionTextBox.Text.Trim()},{date},{!isComplete}", index);
                 System.IO.File.WriteAllLines(filePath, lines);
             }
         }
@@ -68,7 +72,7 @@ namespace ComprogDbNetFramework
                 List<string> updatedLines = lines.ToList();
                 updatedLines.RemoveAt(index);
                 System.IO.File.WriteAllLines(filePath, updatedLines);
-                this.Dispose();
+                this.Close();
             }
         }
 

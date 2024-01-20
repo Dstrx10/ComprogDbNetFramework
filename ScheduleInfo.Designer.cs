@@ -68,6 +68,7 @@
             // 
             // isCompletedCheckBox
             // 
+            this.isCompletedCheckBox.AutoSize = true;
             this.isCompletedCheckBox.Depth = 0;
             this.isCompletedCheckBox.Location = new System.Drawing.Point(14, 439);
             this.isCompletedCheckBox.Margin = new System.Windows.Forms.Padding(0);
@@ -76,8 +77,9 @@
             this.isCompletedCheckBox.Name = "isCompletedCheckBox";
             this.isCompletedCheckBox.ReadOnly = false;
             this.isCompletedCheckBox.Ripple = true;
-            this.isCompletedCheckBox.Size = new System.Drawing.Size(104, 37);
+            this.isCompletedCheckBox.Size = new System.Drawing.Size(141, 37);
             this.isCompletedCheckBox.TabIndex = 0;
+            this.isCompletedCheckBox.Text = "Task Complete";
             // 
             // UpdateBtn
             // 
@@ -114,11 +116,12 @@
             // ScheduleDescriptionLabel
             // 
             this.ScheduleDescriptionLabel.Depth = 0;
+            this.ScheduleDescriptionLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ScheduleDescriptionLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ScheduleDescriptionLabel.Location = new System.Drawing.Point(0, 0);
             this.ScheduleDescriptionLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.ScheduleDescriptionLabel.Name = "ScheduleDescriptionLabel";
-            this.ScheduleDescriptionLabel.Size = new System.Drawing.Size(100, 23);
+            this.ScheduleDescriptionLabel.Size = new System.Drawing.Size(982, 126);
             this.ScheduleDescriptionLabel.TabIndex = 0;
             // 
             // ScheduleDescriptionTextBox
