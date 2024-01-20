@@ -41,6 +41,7 @@
             this.DescriptionCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsCompleteCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefreshButton = new MaterialSkin.Controls.MaterialButton();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScheduleDataTable)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +96,7 @@
             this.DescriptionTextMultiBox.Size = new System.Drawing.Size(851, 113);
             this.DescriptionTextMultiBox.TabIndex = 2;
             this.DescriptionTextMultiBox.TabStop = false;
-            this.DescriptionTextMultiBox.Text = "create a description...";
+            this.DescriptionTextMultiBox.Text = "Create a description...";
             this.DescriptionTextMultiBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.DescriptionTextMultiBox.UseSystemPasswordChar = false;
             // 
@@ -232,11 +233,11 @@
             this.DescriptionCol,
             this.DateCol,
             this.IsCompleteCol});
-            this.ScheduleDataTable.Location = new System.Drawing.Point(6, 387);
+            this.ScheduleDataTable.Location = new System.Drawing.Point(6, 400);
             this.ScheduleDataTable.Name = "ScheduleDataTable";
             this.ScheduleDataTable.ReadOnly = true;
             this.ScheduleDataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.ScheduleDataTable.Size = new System.Drawing.Size(879, 390);
+            this.ScheduleDataTable.Size = new System.Drawing.Size(879, 377);
             this.ScheduleDataTable.TabIndex = 21;
             this.ScheduleDataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ScheduleDataTable_CellContentClick);
             // 
@@ -264,11 +265,35 @@
             this.IsCompleteCol.Name = "IsCompleteCol";
             this.IsCompleteCol.ReadOnly = true;
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RefreshButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RefreshButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.RefreshButton.Depth = 0;
+            this.RefreshButton.HighEmphasis = true;
+            this.RefreshButton.Icon = null;
+            this.RefreshButton.Location = new System.Drawing.Point(17, 357);
+            this.RefreshButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.RefreshButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.RefreshButton.Size = new System.Drawing.Size(84, 36);
+            this.RefreshButton.TabIndex = 15;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.RefreshButton.UseAccentColor = false;
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 790);
+            this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.ScheduleDataTable);
             this.Controls.Add(this.materialCard2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -298,6 +323,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsCompleteCol;
+        private MaterialSkin.Controls.MaterialButton RefreshButton;
     }
 }
 
