@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,11 @@ namespace ComprogDbNetFramework
         string filePath = System.IO.Path.Combine(Application.StartupPath, "ScheduleTextFile.txt");
         public Scheduler()
         {
+            if (!System.IO.File.Exists(filePath))
+            {
+                FileStream fileStream = File.Create(filePath);
+            }
+
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -63,10 +69,14 @@ namespace ComprogDbNetFramework
             TaskBtn.Enabled = false;
             string title = TitleTextBox.Text.Trim();
             string description = DescriptionTextMultiBox.Text.Trim();
-            DateTime date = DateTime.Now; 
+            DateTime date = DateTime.Now;
             bool isComplete = false;
 
             if (TitleTextBox.Text == "Enter title name" && DescriptionTextMultiBox.Text == "Create a description...")
+            {
+                MessageBox.Show("Title and Description cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (TitleTextBox.Text == "Enter title name" || DescriptionTextMultiBox.Text == "Create a description...")
             {
                 MessageBox.Show("Title and Description cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

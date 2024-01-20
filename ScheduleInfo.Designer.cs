@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.isCompletedCheckBox = new MaterialSkin.Controls.MaterialCheckbox();
             this.UpdateBtn = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ScheduleDescriptionLabel = new MaterialSkin.Controls.MaterialLabel();
@@ -37,7 +38,6 @@
             this.ScheduleTitleTextBox = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.ScheduleTitleLabel = new MaterialSkin.Controls.MaterialLabel();
             this.GoBackBtn = new MaterialSkin.Controls.MaterialButton();
-            this.isCompletedCheckBox = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialCard1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,23 @@
             this.materialCard1.Size = new System.Drawing.Size(1013, 583);
             this.materialCard1.TabIndex = 0;
             this.materialCard1.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard1_Paint);
+            // 
+            // isCompletedCheckBox
+            // 
+            this.isCompletedCheckBox.AutoSize = true;
+            this.isCompletedCheckBox.Depth = 0;
+            this.isCompletedCheckBox.Location = new System.Drawing.Point(17, 462);
+            this.isCompletedCheckBox.Margin = new System.Windows.Forms.Padding(0);
+            this.isCompletedCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.isCompletedCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.isCompletedCheckBox.Name = "isCompletedCheckBox";
+            this.isCompletedCheckBox.ReadOnly = false;
+            this.isCompletedCheckBox.Ripple = true;
+            this.isCompletedCheckBox.Size = new System.Drawing.Size(174, 37);
+            this.isCompletedCheckBox.TabIndex = 10;
+            this.isCompletedCheckBox.Text = "is Task Completed?";
+            this.isCompletedCheckBox.UseVisualStyleBackColor = true;
+            this.isCompletedCheckBox.CheckedChanged += new System.EventHandler(this.isCompletedCheckBox_CheckedChanged);
             // 
             // UpdateBtn
             // 
@@ -241,23 +258,6 @@
             this.GoBackBtn.UseAccentColor = false;
             this.GoBackBtn.UseVisualStyleBackColor = true;
             this.GoBackBtn.Click += new System.EventHandler(this.GoBackBtn_Click);
-            // 
-            // isCompletedCheckBox
-            // 
-            this.isCompletedCheckBox.AutoSize = true;
-            this.isCompletedCheckBox.Depth = 0;
-            this.isCompletedCheckBox.Location = new System.Drawing.Point(17, 462);
-            this.isCompletedCheckBox.Margin = new System.Windows.Forms.Padding(0);
-            this.isCompletedCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.isCompletedCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.isCompletedCheckBox.Name = "isCompletedCheckBox";
-            this.isCompletedCheckBox.ReadOnly = false;
-            this.isCompletedCheckBox.Ripple = true;
-            this.isCompletedCheckBox.Size = new System.Drawing.Size(174, 37);
-            this.isCompletedCheckBox.TabIndex = 10;
-            this.isCompletedCheckBox.Text = "is Task Completed?";
-            this.isCompletedCheckBox.UseVisualStyleBackColor = true;
-            this.isCompletedCheckBox.CheckedChanged += new System.EventHandler(this.isCompletedCheckBox_CheckedChanged);
             // 
             // ScheduleInfo
             // 
